@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1:27017/arabicApp");
+mongoose.connect(process.env.MONGO_URI);
 
 mongoose.connection.on("connected", () => {
   console.log("MongoDB connected");
